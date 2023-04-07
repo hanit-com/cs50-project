@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ collection.name }}
+{% endblock %}
+
+{% block banner %}
+    {{ collection.name }}
+{% endblock %}
+
+{% block main %}
+
+    <meta id="collection_data" data-id="{{ collection.id }}">
+    <script src="/static/collection.js"></script>
+
+    <div>
+        <form id="card_creation_form">
+            <div>
+                <input type="text" name="title", placeholder="Title" class="title-field" id="card_creation_title" autocomplete="off" required>
+                <button type="submit" class="btn btn-outline-light form-button" id="card_creation_button">Create</button>
+            </div>
+            <textarea name="content" rows="5" cols="30" placeholder="Write your flashcard content here." class="card-textfield top-buffer" id="card_creation_content" required></textarea>
+            <input name="collection_id" type="hidden" value="{{ collection.id }}">
+        </form>
+
+    </div>
+    <br>
+    <div id="cards_container" class="top-buffer"></div>
+
+{% endblock %}

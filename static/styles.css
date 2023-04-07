@@ -1,0 +1,156 @@
+/* General */
+
+.form-button {
+  background-color: #28debf;
+  width: 100px;
+  height: 42px;
+  border-radius: 25px;
+}
+
+input:not([type=checkbox]) {
+  border-radius: 25px;
+  padding: 10px;
+  border-color: #626fd1;
+  width: 240px;
+}
+
+textarea {
+  border-radius: 25px;
+  border-color: #626fd1;
+  text-align: center;
+  padding: 30px;
+  height: 230px;
+  width: 380px;
+  white-space: pre-wrap;
+  font-size: 18px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+textarea:focus::placeholder {
+  color: transparent;
+}
+
+.top-buffer {
+  margin-top: 25px;
+}
+
+.centered {
+  text-align: center;
+}
+
+.no-data-label {
+  font-size: 25px;
+  margin-bottom: -10px;
+}
+
+.no-data-image {
+  height: 500px;
+  width: 500px;
+}
+
+/* Navigation bar */
+
+body {
+  font-family: 'Nunito', sans-serif;
+  padding: 50px;
+}
+
+nav .navbar-brand {
+  font-size: 35px;
+}
+
+nav .navbar-brand .white {
+  color: #d6d6d6;
+}
+
+.navbar h1 {
+  color: white;
+}
+
+.navbar {
+  background-color: #626fd1;
+}
+
+.banner {
+  text-align: center;
+  margin:auto;
+}
+
+/* Index */
+
+.collections-ul {
+  list-style: none;
+  max-width: 900px;
+  margin: auto;
+}
+
+.collections-li {
+  height: 58px;
+  line-height: 45px;
+  cursor: pointer;
+  border-color: #626fd1;
+}
+
+.collection-remove-button {
+  float: right;
+  background-color: #28debf;
+}
+
+/* Collection */
+
+.card-title {
+  display: inline-block;
+}
+
+.card-container {
+  display: inline-block;
+}
+
+.card {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+  padding: 25px 40px 20px 40px;
+  height: 280px;
+  cursor: pointer;
+}
+
+.card h4 {
+  font-weight: 600;
+}
+
+.card-background {
+  background-image: url("/static/assets/card_cover.png");
+}
+
+.card-1 {
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 350px;
+}
+
+.card-content {
+  padding-top: 25px;
+  font-size: 17px;
+  visibility: hidden;
+}
+
+.title-field {
+  text-align: center;
+  border-radius: 7px;
+  height: 40px;
+}
+
+.card-remove-button {
+  float: left;
+  background-color: #28debf;
+  height: 35px;
+  width: 35px;
+}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Collections
+{% endblock %}
+
+{% block banner %}
+    Collections
+{% endblock %}
+
+{% block main %}
+
+    <script src="/static/index.js"></script>
+
+    <div>
+        <form id="collection_form">
+            <input name="name" placeholder="Collection Name" type="text" class="title-field" id="collection_name_field" autocomplete="off" required>
+            <button type="submit" class="btn btn-outline-light form-button">Create</button>
+        </form>
+    </div>
+    <br>
+    <div id="collections_container" class="top-buffer"></div>
+
+{% endblock %}
