@@ -1,18 +1,44 @@
 
 # Flashcards
 
-## Description:
+## Description
 Flashcards is a web app for making customized study cards.
-A user creates the collections and, for each collection, the related study cards.
-Collection cards appear without the content at first, to allow the user to test himself.
-There is also a user registration system and a password-changing option.
+<br>
+The user creates the collections and, for each collection, the related study cards.
+<br>
+Collection cards presented without the content at first, to allow the user to test himself.
+<br>
+There is also a registration system, authentication and a password-changing option.
 
-This web application is based on Flask framework, using relational DB with SQLite.
+This web application based on Flask framework, using relational DB with SQLite.
+<br>
 The client side implements AJAX concepts using jQuery JavaScript library.
 
 ## Demo
 https://youtu.be/Ft2HY2mb088
 
+## Running
+Install the dependencies:
+```bash
+pip install requirements.txt
+```
+
+
+Run:
+```bash
+python app.py
+flask run
+```
+
+
+## Database
+
+Interact with the local DB:
+```bash
+sqlite3 project.db
+```
+
+![Alt text](readme/entity_relationship_diagram.png "Entity Relationship Diagram")
 
 ## API
 **All parameters are required**

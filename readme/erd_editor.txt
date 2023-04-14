@@ -1,0 +1,26 @@
+// Use this text on the editor
+// https://dbdiagram.io/d
+
+TABLE users {
+  id INTEGER [primary key]
+  username TEXT
+  hash TEXT
+}
+
+
+TABLE collections {
+  id INTEGER [primary key] 
+  name TEXT
+  user_id INTEGER
+}
+
+
+TABLE cards {
+  id INTEGER [primary key]
+  title TEXT
+  content TEXT
+  collection_id INTEGER
+}
+
+Ref: collections.id < cards.collection_id
+Ref: users.id < collections.user_id
