@@ -57,7 +57,7 @@ function deleteCollection(id, name) {
 
     $.ajax({
         url : "/deleteCollection",
-        type: "POST",
+        type: "DELETE",
         dataType: "JSON",
         data : { "id": id },
         success: function () {

@@ -59,7 +59,7 @@ function createCard(form) {
 function deleteCard(id) {
     $.ajax({
         url: "/deleteCard",
-        type: "POST",
+        type: "DELETE",
         dataType: "JSON",
         data: { "id": id },
         success: function(response) {

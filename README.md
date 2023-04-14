@@ -112,7 +112,7 @@ JSON response.
 
 #### Delete a collection
 ```http
-  POST /deleteCollection
+  DELETE /deleteCollection
 ```
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
@@ -145,7 +145,7 @@ JSON response.
 
 #### Delete a card
 ```http
-  POST /deleteCard
+  DELETE /deleteCard
 ```
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
