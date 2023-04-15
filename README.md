@@ -191,6 +191,6 @@ Redirects to initial page.
 
 #### Log out of the app and redirect to the initial page
 ```http
-  GET /logout
+  POST /logout
 ```
 Clears the session and redirects to intial page.

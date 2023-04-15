@@ -38,13 +38,32 @@
                 <div class="collapse navbar-collapse">
                     {% if session["user_id"] %}
                         <ul class="navbar-nav ms-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/changePassword">Change Password</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/logout">Log Out</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/changePassword">
+                                Change Password
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    Logout
+                                </a>
+                                <form id="logout-form" method="POST" action="/logout">
+                                  <input type="hidden">
+                                </form>
+                            </li>
                         </ul>
                     {% else %}
                         <ul class="navbar-nav ms-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/register">
+                                    Register
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login">
+                                    Log In
+                                </a>
+                            </li>
                         </ul>
                     {% endif %}
                 </div>

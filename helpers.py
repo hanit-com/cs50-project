@@ -1,12 +1,8 @@
-#import os
-#import requests
-#import urllib.parse
-
 from flask import redirect, render_template, session
 from functools import wraps
 
+
 def render_error_template(message, code=400):
-    """Render message as an apology to user."""
     def escape(s):
         """
         Escape special characters.

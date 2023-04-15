@@ -1,7 +1,6 @@
-from flask import Flask, redirect, render_template, jsonify, request, session
-from helpers import render_error_template, login_required
-from werkzeug.security import check_password_hash, generate_password_hash
+from flask import Flask, render_template
 from flask_session import Session
+from helpers import login_required
 from database import db
 from auth import auth_bp
 from card_collections import collections_bp
@@ -18,7 +17,9 @@ app.config["TEMPLATES_AUTO_RELOAD"] = True
 # Configure session to use filesystem (instead of signed cookies)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
+
 Session(app)
+
 
 @app.after_request
 def after_request(response):
@@ -27,6 +28,7 @@ def after_request(response):
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
     return response
+
 
 @app.route("/")
 @login_required

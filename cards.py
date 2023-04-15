@@ -4,6 +4,7 @@ from database import db
 
 cards_bp = Blueprint('cards', __name__)
 
+
 @cards_bp.route("/cards")
 @login_required
 def getCards():
@@ -14,6 +15,7 @@ def getCards():
     response = jsonify(success=True, cards=cards)
     response.status_code = 200
     return response
+
 
 @cards_bp.route("/createCard", methods=["POST"])
 @login_required
@@ -40,6 +42,7 @@ def createCard():
     response = jsonify(success=True, newCard=newCard)
     response.status_code = 200
     return response
+
 
 @cards_bp.route("/deleteCard", methods=["DELETE"])
 @login_required

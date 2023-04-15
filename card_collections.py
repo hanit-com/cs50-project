@@ -4,6 +4,7 @@ from database import db
 
 collections_bp = Blueprint('card_collections', __name__)
 
+
 @collections_bp.route("/collections")
 @login_required
 def getCollections():
@@ -11,6 +12,7 @@ def getCollections():
     response = jsonify(success=True, collections=collections)
     response.status_code = 200
     return response
+
 
 @collections_bp.route("/collection")
 @login_required
@@ -24,6 +26,7 @@ def collection():
     collection = collections[0]
 
     return render_template("collection.html", collection=collection)
+
 
 @collections_bp.route("/createCollection", methods=["POST"])
 @login_required
@@ -43,6 +46,7 @@ def createCollection():
     response = jsonify(success=True, newCollection=newCollection)
     response.status_code = 200
     return response
+
 
 @collections_bp.route("/deleteCollection", methods=["DELETE"])
 @login_required
