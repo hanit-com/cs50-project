@@ -17,19 +17,26 @@ The client side implements AJAX concepts using jQuery JavaScript library.
 ## Demo
 https://youtu.be/Ft2HY2mb088
 
-## Running
-Install the dependencies:
+## Getting Started
+Clone the repository:
+```bash
+git clone https://github.com/hanit-com/cs50.git
+```
+
+Install the required packages:
 ```bash
 pip install requirements.txt
 ```
-
-
-Run:
+## Running:
 ```bash
 python app.py
 flask run
 ```
 
+## Testing:
+```bash
+pytest
+```
 
 ## Database
 
