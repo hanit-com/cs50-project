@@ -58,7 +58,9 @@ def register():
         if len(rows) > 0:
             return render_error_template("username is taken")
 
-        db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
+        id = db.execute("INSERT INTO users (username, hash) VALUES(?, ?)", username, generate_password_hash(password))
+        session["user_id"] = id
+
         return redirect("/")
 
     else:
