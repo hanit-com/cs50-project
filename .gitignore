@@ -1,6 +1,4 @@
 flask_session/
 __pycache__/
 .idea/
-.pytest_cache
-project.db
-test.db
+.pytest_cache/
