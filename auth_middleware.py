@@ -37,9 +37,9 @@ def validate_password(password):
 # Login
 
 
-def login_decorator(handler):
+def login_middleware(handler):
     def login_wrapper(*args, **kwargs):
-        error_message = login_middleware()
+        error_message = validate_login()
 
         if error_message:
             return render_error_template(error_message, 401)
@@ -49,7 +49,7 @@ def login_decorator(handler):
     return login_wrapper
 
 
-def login_middleware():
+def validate_login():
     if request.method != "POST":
         return
 
@@ -66,10 +66,10 @@ def login_middleware():
 # Register
 
 
-def register_decorator(handler):
+def register_middleware(handler):
     @wraps(handler)
     def register_wrapper(*args, **kwargs):
-        error_message = register_middleware()
+        error_message = validate_register()
         
         if error_message:
             return render_error_template(error_message)
@@ -79,7 +79,7 @@ def register_decorator(handler):
     return register_wrapper
 
 
-def register_middleware():
+def validate_register():
     if request.method != "POST":
         return
 
@@ -113,9 +113,9 @@ def register_middleware():
 # Change Password
 
 
-def change_password_decorator(handler):
+def change_password_middleware(handler):
     def password_wrapper(*args, **kwargs):
-        error_message = change_password_middleware()
+        error_message = validate_change_password()
 
         if error_message:
             return render_error_template(error_message)
@@ -125,7 +125,7 @@ def change_password_decorator(handler):
     return password_wrapper
 
 
-def change_password_middleware():
+def validate_change_password():
     if request.method != "POST":
         return
 

@@ -14,7 +14,7 @@ error_messages = {
 
 
 @auth_bp.route("/register", methods=["GET", "POST"])
-@middleware.register_decorator
+@middleware.register_middleware
 def register():
     username = request.form.get("username")
     password = request.form.get("password")
@@ -35,7 +35,7 @@ def register():
 
 
 @auth_bp.route("/login", methods=["GET", "POST"])
-@middleware.login_decorator
+@middleware.login_middleware
 def login():
     username = request.form.get("username")
     password = request.form.get("password")
@@ -62,7 +62,7 @@ def logout():
 
 @auth_bp.route("/changePassword", methods=["GET", "POST"])
 @login_required
-@middleware.change_password_decorator
+@middleware.change_password_middleware
 def changePassword():
     current_password = request.form.get("current_password")
     new_password = request.form.get("new_password")
