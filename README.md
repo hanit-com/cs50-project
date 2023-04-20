@@ -2,7 +2,7 @@
 # Flashcards
 
 ## Description
-This web application, built on the Flask framework, is designed to allow users to create customized study cards. With the ability to create collections and associated study cards, the user can conveniently test their knowledge by accessing the cards without the content at first.
+This web application, built on Flask framework, is designed to allow users to create customized study cards. With the ability to create collections and associated study cards, the user can conveniently test their knowledge by accessing the cards without the content at first.
 
 
 In addition to the core functionality, there is a secure registration and authentication system, and a password-changing option. 
