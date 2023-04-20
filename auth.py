@@ -1,6 +1,7 @@
-import auth_middleware as middleware
+from middleware.auth_middleware import register_middleware, login_middleware, change_password_middleware
+from middleware.rate_limiting import rate_limited
 from flask import redirect, render_template, request, session, Blueprint
-from helpers import render_error_template, login_required
+from middleware.helpers import render_error_template, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
 from database import db
 
@@ -14,7 +15,7 @@ error_messages = {
 
 
 @auth_bp.route("/register", methods=["GET", "POST"])
-@middleware.register_middleware
+@register_middleware
 def register():
     username = request.form.get("username")
     password = request.form.get("password")
@@ -35,8 +36,8 @@ def register():
 
 
 @auth_bp.route("/login", methods=["GET", "POST"])
-@middleware.login_middleware
-@middleware.rate_limited(max_calls=5, time_frame=60)
+@login_middleware
+@rate_limited(max_calls=5, time_frame=60)
 def login():
     username = request.form.get("username")
     password = request.form.get("password")
@@ -63,7 +64,7 @@ def logout():
 
 @auth_bp.route("/changePassword", methods=["GET", "POST"])
 @login_required
-@middleware.change_password_middleware
+@change_password_middleware
 def changePassword():
     current_password = request.form.get("current_password")
     new_password = request.form.get("new_password")

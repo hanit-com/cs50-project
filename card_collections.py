@@ -1,5 +1,5 @@
 from flask import render_template, jsonify, request, session, Blueprint
-from helpers import render_error_template, login_required
+from middleware.helpers import render_error_template, login_required
 from database import db
 
 collections_bp = Blueprint('card_collections', __name__)

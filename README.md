@@ -2,38 +2,40 @@
 # Flashcards
 
 ## Description
-Flashcards is a web app for making customized study cards.
-<br>
-The user creates the collections and, for each collection, the related study cards.
-<br>
-Collection cards presented without the content at first, to allow the user to test himself.
-<br>
-There is also a registration system, authentication and a password-changing option.
+This web application, built on the Flask framework, is designed to allow users to create customized study cards. With the ability to create collections and associated study cards, the user can conveniently test their knowledge by accessing the cards without the content at first.
 
-This web application based on Flask framework, using relational DB with SQLite.
+
+In addition to the core functionality, there is a secure registration system, authentication, and a password-changing option. 
 <br>
-The client side implements AJAX concepts using jQuery JavaScript library.
+The authentication mechanism has been implemented with rate-limiting, salted passwords and testing to ensure robust security.
+
+
+The application is backed by a relational database that utilizes SQLite. 
+<br>
+On the client side, AJAX have been implemented using the jQuery JavaScript library
+<br><br>
 
 ## Demo
 https://youtu.be/Ft2HY2mb088
+<br><br>
 
 ## Getting Started
 Clone the repository:
 ```bash
 git clone https://github.com/hanit-com/cs50.git
 ```
-
 Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
-## Running:
+
+## Running
 ```bash
 python app.py
 flask run
 ```
 
-## Testing:
+## Testing
 ```bash
 pytest
 ```
@@ -46,6 +48,7 @@ sqlite3 project.db
 ```
 
 ![Alt text](readme/entity_relationship_diagram.png "Entity Relationship Diagram")
+<br><br>
 
 ## API
 **All parameters are required**

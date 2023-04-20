@@ -1,5 +1,5 @@
 from flask import jsonify, request, Blueprint
-from helpers import login_required
+from middleware.helpers import login_required
 from database import db
 
 cards_bp = Blueprint('cards', __name__)

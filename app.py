@@ -1,7 +1,6 @@
 from flask import Flask, render_template
 from flask_session import Session
-from helpers import login_required
-from database import db
+from middleware.helpers import login_required
 from auth import auth_bp
 from card_collections import collections_bp
 from cards import cards_bp
