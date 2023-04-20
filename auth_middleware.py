@@ -2,7 +2,10 @@ from flask import request
 from helpers import render_error_template
 from functools import wraps
 import re
+from collections import deque
+import time
 
+call_history = {}
 
 error_messages = {
     "missing_username": "Please provide a username",
@@ -17,6 +20,7 @@ error_messages = {
     "password_no_letter": "Please include at least one letter in password",
     "password_no_digit": "Please include at least one digit in password",
     "passwords_do_not_match": "Passwords do not match. Please try again",
+    'rate_limit_exceeded': 'Rate limit exceeded. Please try again in {seconds} seconds.'
 }
 
 
@@ -61,7 +65,36 @@ def validate_login():
 
     elif not password:
         return error_messages["missing_password"]
-    
+
+
+def rate_limited(max_calls=5, time_frame=60):
+    def decorator(handler):
+        def wrapper(*args, **kwargs):
+            ip_address = request.remote_addr
+
+            if ip_address not in call_history:
+                call_history[ip_address] = deque()
+            
+            queue = call_history[ip_address]
+            current_time = time.time()
+            
+            while len(queue) > 0 and current_time - queue[0] > time_frame:
+                queue.popleft()
+            
+            if len(queue) > max_calls:
+                time_passed = current_time - queue[0]
+                time_to_wait = int(time_frame - time_passed)
+                error_message = error_messages['rate_limit_exceeded'].format(seconds=time_to_wait)
+                return error_message, 429
+
+            queue.append(current_time)
+
+            return handler(*args, **kwargs)
+
+        return wrapper
+
+    return decorator
+
 
 # Register
 

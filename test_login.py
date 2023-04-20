@@ -62,3 +62,16 @@ def test_logout():
     client.post(logout_path)
     response = client.get("/")
     assert response.status_code == 302
+
+
+# Rate Limiting
+
+
+def test_rate_limiting():
+    data = {"username": "login_user123", "password": "aa123456"}
+    client.post(login_path, data=data)
+    client.post(login_path, data=data)
+    client.post(login_path, data=data)
+    client.post(login_path, data=data)
+    response = client.post(login_path, data=data)
+    assert response.status_code == 429

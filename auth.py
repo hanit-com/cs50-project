@@ -36,6 +36,7 @@ def register():
 
 @auth_bp.route("/login", methods=["GET", "POST"])
 @middleware.login_middleware
+@middleware.rate_limited(max_calls=5, time_frame=60)
 def login():
     username = request.form.get("username")
     password = request.form.get("password")
