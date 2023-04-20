@@ -3,7 +3,7 @@ from middleware.rate_limiting import rate_limited
 from flask import redirect, render_template, request, session, Blueprint
 from middleware.helpers import render_error_template, login_required
 from werkzeug.security import check_password_hash, generate_password_hash
-from database import db
+from data.database import db
 
 auth_bp = Blueprint('auth', __name__)
 

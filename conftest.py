@@ -1,5 +1,5 @@
 from cs50 import SQL
-from database import test_db
+from data.database import test_db
 
 
 def pytest_sessionfinish(session, exitstatus):
