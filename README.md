@@ -5,18 +5,17 @@
 This web application, built on the Flask framework, is designed to allow users to create customized study cards. With the ability to create collections and associated study cards, the user can conveniently test their knowledge by accessing the cards without the content at first.
 
 
-In addition to the core functionality, there is a secure registration system, authentication, and a password-changing option. 
+In addition to the core functionality, there is a secure registration and authentication system, and a password-changing option. 
 <br>
-The authentication mechanism has been implemented with rate-limiting, salted passwords and testing to ensure robust security.
+The authentication mechanism has been implemented with rate-limiting, salted passwords, and testing to ensure robust security.
 
 
 The application is backed by a relational database that utilizes SQLite. 
 <br>
-On the client side, AJAX have been implemented using the jQuery JavaScript library
+On the client side, AJAX has been implemented using the jQuery JavaScript library.
 <br><br>
 
-## Demo
-https://youtu.be/Ft2HY2mb088
+![Alt text](documentation/screenshot.png "Entity Relationship Diagram")
 <br><br>
 
 ## Getting Started
@@ -47,7 +46,7 @@ Interact with the local DB:
 sqlite3 project.db
 ```
 
-![Alt text](readme/entity_relationship_diagram.png "Entity Relationship Diagram")
+![Alt text](documentation/entity_relationship_diagram.png "Entity Relationship Diagram")
 <br><br>
 
 ## API

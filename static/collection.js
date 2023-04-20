@@ -159,7 +159,7 @@ function getNoDataDiv() {
 
     const label = document.createElement("p");
     label.setAttribute("class", "no-data-label");
-    label.innerHTML = "No cards in the collection";
+    label.innerHTML = "Your cards will appear here";
 
     const image = document.createElement("img");
     image.setAttribute("class", "no-data-image");

@@ -1,7 +1,7 @@
 /* General */
 
 .form-button {
-  background-color: #28debf;
+  background-color: #02cba9;
   width: 100px;
   height: 42px;
   border-radius: 25px;
@@ -10,13 +10,13 @@
 input:not([type=checkbox]) {
   border-radius: 25px;
   padding: 10px;
-  border-color: #626fd1;
+  border-color: #262e65;
   width: 240px;
 }
 
 textarea {
   border-radius: 25px;
-  border-color: #626fd1;
+  border-color: #262e65;
   text-align: center;
   padding: 30px;
   height: 230px;
@@ -47,7 +47,7 @@ textarea:focus::placeholder {
 
 .no-data-label {
   font-size: 25px;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 
 .no-data-image {
@@ -59,7 +59,7 @@ textarea:focus::placeholder {
 
 body {
   font-family: 'Nunito', sans-serif;
-  padding: 50px;
+  padding: 40px;
 }
 
 nav .navbar-brand {
@@ -75,7 +75,7 @@ nav .navbar-brand .white {
 }
 
 .navbar {
-  background-color: #626fd1;
+  background-color: #262e65;
 }
 
 .banner {
@@ -95,12 +95,12 @@ nav .navbar-brand .white {
   height: 58px;
   line-height: 45px;
   cursor: pointer;
-  border-color: #626fd1;
+  border-color: #262e65;
 }
 
 .collection-remove-button {
   float: right;
-  background-color: #28debf;
+  background-color: #02cba9;
 }
 
 /* Collection */
@@ -150,7 +150,7 @@ nav .navbar-brand .white {
 
 .card-remove-button {
   float: left;
-  background-color: #28debf;
+  background-color: #02cba9;
   height: 35px;
   width: 35px;
 }

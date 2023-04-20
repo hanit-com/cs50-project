@@ -117,7 +117,7 @@ function getNoDataDiv() {
 
     const label = document.createElement("p");
     label.setAttribute("class", "no-data-label");
-    label.innerHTML = "No collections";
+    label.innerHTML = "Your collections will appear here";
 
     const image = document.createElement("img");
     image.setAttribute("class", "no-data-image");
