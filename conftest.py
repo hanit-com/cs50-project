@@ -1,5 +1,4 @@
-from cs50 import SQL
-from data.database import test_db
+from data.database import db
 
 
 def pytest_sessionfinish(session, exitstatus):
@@ -9,7 +8,6 @@ def pytest_sessionfinish(session, exitstatus):
 
 
 def clear_tables():
-    db = SQL(test_db)
     tables = ["users", "collections", "cards"]
 
     for table in tables:
