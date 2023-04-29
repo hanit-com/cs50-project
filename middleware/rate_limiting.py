@@ -23,7 +23,7 @@ def rate_limited(max_calls=5, time_frame=60):
             while len(queue) > 0 and current_time - queue[0] > time_frame:
                 queue.popleft()
             
-            if len(queue) > max_calls:
+            if len(queue) >= max_calls:
                 time_passed = current_time - queue[0]
                 time_to_wait = int(time_frame - time_passed)
                 error_message = error_messages['rate_limit_exceeded'].format(seconds=time_to_wait)
