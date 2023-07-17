@@ -22,7 +22,7 @@ On the client side, AJAX has been implemented using the jQuery JavaScript librar
 ## Getting Started
 Clone the repository:
 ```bash
-git clone https://github.com/hanit-com/cs50.git
+git clone https://github.com/hanit-com/cs50-project.git
 ```
 Install the required packages:
 ```bash
