@@ -15,7 +15,7 @@ The application is backed by a relational database that utilizes SQLite.
 On the client side, AJAX has been implemented using the jQuery JavaScript library.
 <br><br>
 
-![Alt text](documentation/screenshot.png "Entity Relationship Diagram")
+![Alt text](documentation/screenshot_1.png "Entity Relationship Diagram")
 <br><br>
 
 ## Getting Started
@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ## Running
 ```bash
-python app.py
+python3 app.py
 flask run
 ```
 
