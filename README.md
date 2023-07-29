@@ -1,7 +1,6 @@
 
 # Flashcards
 
-## Description
 This web application, built on Flask framework, is designed to allow users to create customized study cards. With the ability to create collections and associated study cards, the user can conveniently test their knowledge by accessing the cards without the content at first.
 
 
@@ -13,7 +12,9 @@ The authentication mechanism has been implemented with rate-limiting, salted pas
 The application is backed by a relational database that utilizes SQLite. 
 <br>
 On the client side, AJAX has been implemented using the jQuery JavaScript library.
-<br><br>
+<br>
+
+[YouTube Demo](https://www.youtube.com/watch?v=Ft2HY2mb088&t=30s)
 
 ![Alt text](documentation/screenshot_1.png "Entity Relationship Diagram")
 <br><br>
@@ -21,7 +22,7 @@ On the client side, AJAX has been implemented using the jQuery JavaScript librar
 ## Getting Started
 Clone the repository:
 ```bash
-git clone https://github.com/hanit-com/cs50.git
+git clone https://github.com/hanit-com/cs50-project.git
 ```
 Install the required packages:
 ```bash
